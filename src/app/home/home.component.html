@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <title>Expense Manager</title>
+    </head>
+    <body>
+
+        <div class="container">
+        <div class="income-container">
+            <p>Max Income : <button class="max">&#x2191;</button> Rs.{{this.maxIncome}}</p>
+            <p>Min Income : <button class="min">&#x2193;</button> Rs.{{minIncome}}</p>
+            <br>
+            <p>Total Income : Rs.<span id="in-TotalSum">{{income}}</span></p>
+            <br>
+            <span id="heading">Income</span>
+            <div class="income-list" *ngFor = "let in of incomes">
+                <ul>
+                    <li>{{in.name}}</li>
+                    <div class="end">
+                    <span id="in-span">{{in.amount}}</span>
+                    <button (click)="deleteItem(in.id)">X</button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="middle-container">
+        <div class="topic">Expense Manager</div>
+        <br><br>
+        <div class="balance">
+            <h2>Balance</h2>
+            <span>Rs.{{income-expense}}</span>
+        </div>
+        <br><br>
+        <form #addMoney ="ngForm">
+        <label>Title</label>
+        <input name="name" [(ngModel)]="expvalue.name" type = "text" placeholder="Enter Income / Expense">
+        <label id="amount" name="amount">Amount</label>
+        <input name="amount" [(ngModel)]="expvalue.amount" placeholder="Enter Amount" type="number">
+        <button id="income" type="submit" (click)="addIncome(addMoney.value)">Add Income</button>
+        <button id="expense" type="submit" (click)="addExpense(addMoney.value)">Add Expense</button>
+        </form>
+
+        <div class="currency">
+            <span class="currency-title">Currency Converter</span>
+            <form>
+                <label>Enter Amount</label>
+                <input type="text">
+                <label>From</label>
+                <label>To</label>
+                <button>Convert Money</button>
+            </form>
+        </div>
+        </div>
+
+        <div class="expense-container">
+            <p>Max Expense : <button class="max-rev">↑</button> Rs.{{this.maxExpense}}</p>
+            <p>Min Expense : <button class="min-rev">↓</button> Rs.{{minIncome}}</p>
+            <br>
+            <p>Total Expense : Rs.<span id="ex-TotalSum">{{expense}}</span></p>
+            <br>
+            <span id="heading">Expense</span>
+            <div class="income-list" *ngFor = "let ex of expenses">
+                <ul>
+                    <li>{{ex.name}}</li>
+                    <div class="end">
+                    <span id="ex-span">{{ex.amount}}</span>
+                    <button (click)="deleteItem(ex.id)">X</button>
+                    </div>
+                </ul>
+            </div>
+        </div>
+        </div>
+    </body>
+</html>

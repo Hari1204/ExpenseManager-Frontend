@@ -1,0 +1,184 @@
+html
+{
+    padding-top: 20px;
+}
+*,h1,h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+p
+{
+    font-size: 24px;
+}
+.topic
+{
+    padding: 10px 0 0 0 ;
+    text-align: center;
+    font-size: 48px;
+    color: rgb(14, 107, 87);
+}
+.balance
+{
+    color: white;
+    background-color: black;
+    width: fit-content;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px 60px 10px 60px;
+    border-radius: 6px;
+    font-size: 24px;
+}
+.max, .min-rev
+{
+    background-color: green;
+    color: white;
+    border: none;
+}
+.min, .max-rev
+{
+    background-color: red;
+    color: white;
+    border: none;
+}
+form
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-bottom: 60px;
+}
+form label
+{
+    font-size: 20px;
+    padding-top: 10px;
+    text-align: left;
+}
+form input
+{
+    font-size: 16px;
+}
+form button
+{
+    margin-top: 8px;
+    border: none;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: 5px 5px 5px grey;
+}
+form #income
+{
+    background-color: green;
+}
+form #income:hover
+{
+    margin-top: 8px;
+    border: none;
+    color: white;
+    padding: 4px;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px grey;
+    background-color: rgb(3, 78, 3);
+}
+form #expense
+{
+    background-color: red;
+}
+form #expense:hover
+{
+    margin-top: 8px;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    font-size: 18px;
+    box-shadow: 3px 3px 3px grey;
+    background-color: rgb(150, 5, 5)
+}
+.container
+{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
+.middle-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.income-container, .expense-container
+{
+    align-items: center;
+    text-align: center;
+}
+.income-container #heading, .expense-container #heading
+{
+    font-size: 30px;
+}
+ul
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border: 2px solid black;
+    padding: 4px;
+    width: 360px;
+    border-radius: 4px;
+}
+li
+{
+    margin-right: 0;
+    font-size: 18px;
+    padding: 0 4px 0 4px;
+}
+/* also for expense */
+.end #in-span, .end #ex-span
+{
+    margin-right: 4px;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 4px 2px 4px;
+}
+.end button
+{
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+}
+.end #in-span
+{
+    background-color: green;
+}
+.end #ex-span
+{
+    background-color: red;
+}
+
+#in-TotalSum
+{
+    margin-right: 4px;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 4px 2px 4px;
+    background-color: green;
+}
+#ex-TotalSum
+{
+    margin-right: 4px;
+    color: white;
+    border-radius: 4px;
+    padding: 2px 4px 2px 4px;
+    background-color: red;
+}
+.currency-title
+{
+    font-size: 48px;
+    color: rgb(14, 107, 87);
+}
+.currency button
+{
+    background-color: rgb(18, 97, 187);
+}
